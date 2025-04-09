@@ -1,0 +1,152 @@
+*{
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+:root {
+    --bs-border-radius: 1rem;
+}
+
+body {
+    background-color: #373737;
+}
+
+a {
+    text-decoration: none;
+}
+
+hr {
+    color: white;
+}
+
+.row {
+    padding-left: 0px;
+}
+
+.sidebar {
+    background-color: #2c2c2c;
+    color: white;
+    height: 100vh;
+    padding: 15px;
+}
+
+.tickets {
+    margin-top: 20px;
+}
+
+.ticket-main-text-first {
+    color: white;
+}
+
+.list-group {
+    --bs-list-group-bg: none;
+}
+
+.list-group-item {
+    border: none !important;
+    color: rgb(200, 200, 200);
+    padding-left: 5px;
+}
+
+.list-group-item:first-child {
+    border-radius: 0px;
+}
+
+.list-group-item:last-child {
+    border-radius: 0px;
+}
+
+.list-group-item a {
+    color: rgb(200, 200, 200);
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.list-group-item:hover {
+    background-color: rgb(136, 136, 136);
+    color: black;
+}
+
+.card {
+    --bs-card-border-color: 0;
+    --bs-card-border-radius: 0;
+}
+
+.card-header:first-child {
+    border-radius: 0;
+}
+
+.ticket-card {
+    cursor: pointer;
+    border-left: 5px solid #007bff;
+    background-color: #d7d7d7;
+    box-shadow: 5px 4px 4px 2px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ticket-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ticket-card-body {
+    padding-left: 0;
+    padding-bottom: 5px;
+}
+
+.ticket-menu-down {
+    font-size: 13px;
+    padding-left: 10px;
+}
+
+.ticket-menu-down span {
+    border-radius: 0;
+}
+
+.ticket-priority-high {
+    border-left-color: red;
+}
+.ticket-priority-medium {
+    border-left-color: orange;
+}
+.ticket-priority-low {
+    border-left-color: green;
+}
+
+.ticket-text {
+    text-align: center;
+    font-size: 15px;
+    color: rgb(58, 58, 58);
+    margin: 0;
+}
+
+.ticket-status {
+    position: relative;
+}
+
+.ticket-status-type {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: red;
+    color: white;
+    display: inline-block;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 5px;
+}
+
+.left-open {
+    background-color: rgb(41, 133, 255);
+    border-radius: 0;
+}
+
+.left-new {
+    background-color: rgb(255, 148, 41);
+    border-radius: 0;
+}

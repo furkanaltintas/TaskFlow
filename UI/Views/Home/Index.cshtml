@@ -1,0 +1,55 @@
+﻿@using Application.Features.Results.AppTaskResults
+@model List<GetAllAppTaskResult>
+
+<div class="col-md-12 tickets">
+    <div class="ticket-main-text">
+        <h4 class="ticket-main-text-first">Destek Talepleri</h4>
+        <hr>
+    </div>
+
+    <div id="taskTable" class="ticket">
+        @foreach(var task in Model)
+        {
+            <a asp-action="Detail" asp-route-id="@task.Id">
+                <div class="card mb-3 ticket-card ticket-priority-high">
+                    <div class="card-body ticket-card-body">
+                        <div class="row ticket-menu-up">
+                            <div class="col-12 col-md-2 ticket-id">
+                                <h5 class="ticket-text">BT DESTEK ID: <br> #BT-@task.CreatedAt.ToString("yyMMdd")@task.Id </h5>
+                                <span class="badge left-open w-100" style="display: flex; justify-content: center; align-items: center; height: 30px;">DURUM: Açık</span>
+                            </div>
+                            <div class="col-12 col-md-10">
+                                <h5>@task.Title</h5>
+                                <p>@task.Description</p>
+                            </div>
+                        </div>
+                        <div class="row ticket-menu-down">
+                            <div class="col-12 col-md-6 d-flex">
+                                <div class="col-6 col-md-3">
+                                    <label class="d-block">Personel</label>
+                                    <span class="badge bg-success">@task.PersonelName</span>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <label class="d-block">Oluşturma Tarihi</label>
+                                    <span class="badge bg-primary">@task.CreatedAt</span>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <label class="d-block">Talep Türü</label>
+                                    <span class="badge bg-danger">@task.RequestTypeName</span>
+                                </div>
+                                <div class="col-6 col-md-3">
+                                    <label class="d-block">Talep İlişkili Birim</label>
+                                    <span class="badge bg-secondary">@task.RelatedUnitName</span>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-6 d-flex justify-content-center align-items-center">
+                                <div class="ticket-status-type"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+        }
+    </div>
+</div>

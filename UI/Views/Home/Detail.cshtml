@@ -1,0 +1,106 @@
+﻿@using Application.Features.Results.AppTaskResults
+@model GetAppTaskDetailResult
+
+<div class="col-md-12 tickets">
+    <div class="ticket-main-text">
+        <div class="row align-items-center">
+            <div class="col-md-4">
+                <h4 class="ticket-main-text-first">Destek Talebi</h4>
+            </div>
+            <div class="col-md-8 text-end">
+                <a class="btn btn-danger">Sil</a>
+                <a class="btn btn-warning">Güncelle</a>
+                <a class="btn btn-primary">Geçmiş</a>
+            </div>
+        </div>
+
+        <hr />
+    </div>
+    <div class="card shadow-lg w-100">
+        <div class="card-header bg-danger text-dark fw-bold">
+            Bilgi Teknolojileri Sorun Bilgilendirmesi
+        </div>
+        <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">BT DESTEK ID</label>
+                        <div>BT-@Model.CreatedAt.ToString("yyMMdd")@Model.Id</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Durum</label>
+                        <div>@Model.TaskStatusName - Test (ALTINTAŞ BT)</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Personel</label>
+                        <div>@Model.PersonelName</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Talep Türü</label>
+                        <div>@Model.RequestType</div>
+                    </div>
+                </div>
+                <hr class="text-dark" />
+                <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Talep İlişkili Birim</label>
+                        <div>@Model.DemandRelatedUnit</div>
+                    </div>
+                    <div class="col-md-9">
+                        <label class="form-label fw-bold">Sorununuzu Detaylı Anlatınız</label>
+                        <div>@Model.Detail</div>
+                    </div>
+                </div>
+                <hr class="text-dark" />
+                <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold text-danger">
+                            Yapılan İşlem - (BT Tarafından Doldurulacaktır)
+                        </label>
+                        <div>@Model.YapilanIslem</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Bilgi Verilecek Kişiler</label>
+                        <div>@Model.BilgiVerilecekKisiler</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Oluşturma Tarihi</label>
+                        <div>@Model.CreatedAt</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Bildirim Kapatılma Tarihi</label>
+                        <div>-@Model.BildirimKapatilmaTarihi</div>
+                    </div>
+                </div>
+                <hr class="text-dark" />
+                <div class="row">
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Görsel Ekle 1</label>
+                        <div>-@Model.Gorsel1</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Görsel Ekle 2</label>
+                        <div>-@Model.Gorsel2</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Görsel Ekle 3</label>
+                        <div>-@Model.Gorsel3</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Görsel Ekle 4</label>
+                        <div>-@Model.Gorsel4</div>
+                    </div>
+                </div>
+                <hr class="text-dark" />
+                <div class="row">
+                    <div class="col-md-9">
+                        <label class="form-label fw-bold">Döküman Ekle</label>
+                        <div>-@Model.Dokuman</div>
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label fw-bold">Çözüm Süresi (Dakika)</label>
+                        <div>@Model.CozumSuresi</div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
