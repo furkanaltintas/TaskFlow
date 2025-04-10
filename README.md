@@ -1,4 +1,4 @@
-# HelpDesk Net9_CleanArchitecture
+# HelpDesk
 Bu proje, Helpdesk sistemini geliştirmeyi amaçlayan bir web uygulamasıdır. Kullanıcılar, taleplerini oluşturabilir, yönetebilir ve çözüm sürecinde adım adım takip edebilir. 
 Uygulama, .NET Core üzerinde geliştirilmiş olup, modern yazılım prensiplerine uygun şekilde tasarlanmıştır.
 
